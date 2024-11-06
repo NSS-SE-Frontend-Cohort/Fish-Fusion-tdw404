@@ -8,6 +8,7 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}/node_modules/.bin/jest",
             "request": "launch",
+            "outputCapture": "std",
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -17,6 +18,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+            "outputCapture": "std",
             "skipFiles": [
                 "<node_internals>/**"
             ],

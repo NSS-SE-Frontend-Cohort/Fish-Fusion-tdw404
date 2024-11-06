@@ -34,7 +34,24 @@ const mongerInventory = (maxPrice) => {
 
     //Since the tests want the boat list to stay static, I'll use much simpler logic:
     const purchaseList = []
-    for (var fish of boatInventory()) {
+    //The original for/of loop:
+    // for (var fish of boatInventory()) {
+    //     if (fish.price <= 7.5 && fish.amount >= 10) {
+    //         var boughtFish = {
+    //             id: fish.id,
+    //             species: fish.species,
+    //             weight: fish.weight,
+    //             price: fish.price,
+    //             amount: 10}
+    //             if (boughtFish.price <= maxPrice) {
+    //                 boughtFish.amount = 5
+    //                 purchaseList.push(boughtFish)
+    //             }
+    //     }
+    // }
+
+    //Updated to use the map() method
+    boatInventory().map(fish => {
         if (fish.price <= 7.5 && fish.amount >= 10) {
             var boughtFish = {
                 id: fish.id,
@@ -47,7 +64,7 @@ const mongerInventory = (maxPrice) => {
                     purchaseList.push(boughtFish)
                 }
         }
-    }
+    })
     return purchaseList
 }
 

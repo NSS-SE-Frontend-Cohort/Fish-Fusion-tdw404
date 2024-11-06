@@ -18,6 +18,5 @@
     "jest": "^25.5.4"
   },
   "dependencies": {
-    "module": "@babel/plugin-transform-modules-commonjs"
   }
 }
